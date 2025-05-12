@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Records</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+        th { background-color: #f2f2f2; }
+        h1 { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Attendance Records</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        {% for row in records %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
