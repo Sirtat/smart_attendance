@@ -3,12 +3,10 @@ import sqlite3
 
 app = Flask(__name__)
 
-# Home page
 @app.route('/')
 def index():
     return "<h1>Smart Attendance System</h1><p><a href='/attendance'>View Attendance</a></p>"
 
-# Attendance page
 @app.route('/attendance')
 def show_attendance():
     conn = sqlite3.connect('attendance.db')
